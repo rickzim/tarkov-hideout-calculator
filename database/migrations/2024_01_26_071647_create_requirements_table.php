@@ -15,11 +15,6 @@ return new class extends Migration
         Schema::create('requirements', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Upgrade::class)->constrained()->cascadeOnDelete();
-            /*
-            $table->string('type'); // 'item, trader, skill'
-            $table->unsignedBigInteger('required_id');
-            $table->unsignedBigInteger('required_amount');
-            */
             $table->morphs('requirementable');
             $table->unsignedBigInteger('required_amount');
 
