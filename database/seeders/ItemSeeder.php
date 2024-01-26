@@ -13,8 +13,7 @@ class ItemSeeder extends Seeder
     public function run(): void
     {
         collect([
-            ['name' => 'Cheese', 'type' => 'other'],
-            ['name' => 'Beef Stew', 'type' => 'other'],
+            ['name' => 'xxxx', 'type' => 'xxxx'],
         ])->each(fn ($item) => Item::create($item));
     }
 }

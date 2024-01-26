@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignIdFor(Module::class)->constrained()->cascadeOnDelete();
             $table->unsignedBigInteger('level');
             $table->string('construction_time');
-            $table->boolean('is_constructed');
+            $table->boolean('is_constructed')->default(false);
             $table->timestamps();
         });
     }
