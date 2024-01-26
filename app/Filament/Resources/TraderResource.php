@@ -17,7 +17,7 @@ class TraderResource extends Resource
 {
     protected static ?string $model = Trader::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Settings';
 
     public static function form(Form $form): Form
     {

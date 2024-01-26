@@ -18,7 +18,7 @@ class UpgradeResource extends Resource
 {
     protected static ?string $model = Upgrade::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Settings';
 
     public static function form(Form $form): Form
     {
