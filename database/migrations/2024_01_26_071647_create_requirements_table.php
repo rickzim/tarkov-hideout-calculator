@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('required_id');
             $table->unsignedBigInteger('required_amount');
             */
-            $table->morphs('Requireable');
+            $table->morphs('requirementable');
             $table->unsignedBigInteger('required_amount');
 
             $table->timestamps();
