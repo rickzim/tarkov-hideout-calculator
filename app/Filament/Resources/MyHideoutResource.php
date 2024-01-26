@@ -45,10 +45,12 @@ class MyHideoutResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('level')
-                    ->numeric()
+                    ->icon('heroicon-s-chart-bar')
+                    ->badge()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('construction_time')
-                    ->searchable(),
+                    ->icon('heroicon-s-clock')
+                    ->badge(),
                 Tables\Columns\ToggleColumn::make('is_constructed'),
             ])
             ->groups([

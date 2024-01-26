@@ -42,7 +42,7 @@ class UpgradeResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('module_id')
+                Tables\Columns\TextColumn::make('module.name')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('level')
@@ -50,13 +50,6 @@ class UpgradeResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('construction_time')
                     ->searchable(),
-
-                /**
-                 * disabled because you will do this via the Hideout tab
-                 */
-                // Tables\Columns\IconColumn::make('is_constructed')
-                //     ->boolean(),
-
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

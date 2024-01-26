@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\UpgradeResource\RelationManagers;
 
+use App\Models\Requirement;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
@@ -30,6 +31,11 @@ class RequirementsRelationManager extends RelationManager
             ->recordTitleAttribute('id')
             ->columns([
                 Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('requirementable_type')
+                    ->state(fn (Requirement $record) => $record->type)
+                    ->badge(),
+                Tables\Columns\TextColumn::make('requirementable.name'),
+                Tables\Columns\TextColumn::make('required_amount'),
             ])
             ->filters([
                 //
