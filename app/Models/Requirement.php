@@ -9,6 +9,8 @@ class Requirement extends Model
 {
     use HasFactory;
 
+    protected $guarded = []; // todo: replace for fillable
+
     public function upgrade()
     {
         return $this->belongsTo(Upgrade::class);
